@@ -37,7 +37,7 @@ Now set up a secure installation
 
 	$ sudo mysql_secure_installation  
 
-Enter your MySQL root password when prompted
+Enter your MySQL root password when prompted  
 Enter Y to set up Validate Password plug-in  
 Select desired security level  
 Select N to keep password as is, or Y to change password if desired  
