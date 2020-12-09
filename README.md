@@ -67,7 +67,7 @@ Unzip Wordpress Files
 
 Move Wordpress files from unzipped folder to web root folder eg: /var/www/html  
 
-	$ sudo rsync -av wordpress/* _ your web root folder _  
+	$ sudo rsync -av wordpress/* _your web root folder_  
 
 Set permissions for Wordpress files  
 
@@ -118,8 +118,8 @@ Press ctrl-X to exit document
 	$ sudo service mysql restart  
 
 
-**Now you can open your web browser and enter your domain name, and finish up the rest of your installation on your  
-brand new Wordpress website!!**  
+**Now you can open your web browser, enter your domain name, and finish up the rest of your installation on  
+ your brand new Wordpress website!!**  
 
 
 
