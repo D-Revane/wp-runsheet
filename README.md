@@ -16,17 +16,6 @@ Start with an SSH connection into your Ubuntu machine, now update server package
 	$ sudo apt-get update  
 
 Enter your sudo password when prompted  
-Now navigate to the /var directory, and add a temp folder to work out of    
-
-	$ cd /var  
-	$sudo mkdir temp  
-
-Now give yourself full permissions within the temp directory, and then navigate to it  
-
-Let's start by updating server packages  
-
-	$ sudo apt-get update  
-
 Now navigate to /var directory, and creating a temp folder to work from    
 
 	$ cd /var  
@@ -70,7 +59,6 @@ Now install PHP 7.2
 	$ sudo apt-get install php7.2  
 
 Enter Y when prompted  
-
 Add required PHP mods  
 
 	$ sudo apt-get install libApache2-mod-php7.2 php7.2-mysql php7.2-mbstring  
@@ -105,7 +93,7 @@ Access MySQL command line
 	$ mysql -u root -p  
 
 Enter MySQL root password when prompted  
-
+Create database, and set user privileges  
 
 	MySQL>$ CREATE DATABASE _your database name_;  
 	MySQL>$ GRANT ALL PRIVILEGES ON _your database name_ TO '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';  
@@ -123,7 +111,6 @@ Change wp-config-sample file to wp-config file
 	$ sudo mv wp-config-sample.php wp-config.php  
 
 Enter your sudo password when prompted  
-
 Update mySQL settings in wp-config file  
 
 	$ sudo nano wp-config.php  
