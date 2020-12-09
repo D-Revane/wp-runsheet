@@ -93,12 +93,13 @@ Access MySQL command line
 	$ mysql -u root -p  
 
 Enter MySQL root password when prompted  
-Create database, and set user privileges  
+Create user,  database, and set user privileges  
 
-	MySQL>$ CREATE DATABASE _your database name_;  
-	MySQL>$ GRANT ALL PRIVILEGES ON _your database name_.* TO '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';  
-	MySQL>$ FLUSH PRVILEGES;  
-	MySQL>$ EXIT;  
+	mysql>$ CREATE USER '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';
+	mysql>$ CREATE DATABASE _your database name_;  
+	mysql>$ GRANT ALL PRIVILEGES ON _your database name_.* TO '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';  
+	mysql>$ FLUSH PRVILEGES;  
+	mysql>$ EXIT;  
 
 ## **Add Wordpress to Domain Name**  
 
