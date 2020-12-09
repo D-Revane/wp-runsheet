@@ -1,6 +1,6 @@
 # **WEB 105 | Wordpress Install Guide**  
 
-This run-sheet takes you through the steps to install manually Wordpress on Ubuntu 16.04  
+This run-sheet takes you through the steps to manually install Wordpress on Ubuntu 16.04  
 This guide assumes that you already have an Ubuntu 16.04 machine set up with Apache2 installed and configured,  
 with SSH enabled.  
 
