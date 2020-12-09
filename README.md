@@ -10,13 +10,20 @@ Wordpress runs an a LAMP stack
  -MySQL  
  -PHP  
 
-Let's start by SSHing into your Ubuntu machine, and navigating to the temp folder  
-
-	$ cd /var/tmp  
-
-## **Update machine for current packages**  
+Start with an SSH connection into your Ubuntu machine, now update server packages  
 
 	$ sudo apt-get update  
+
+Enter your sudo password when prompted  
+Now navigate to the /var directory, and add a temp folder to work out of    
+
+	$ cd /var  
+	$sudo mkdir temp  
+
+Now give yourself full permissions within the temp directory, and then navigate to it  
+
+	$ sudo chown -R _your sudo username_ temp  
+	$ cd temp  
 
 ## **Install MySQL**  
 
@@ -29,6 +36,7 @@ Now set up a secure installation
 
 	$ sudo mysql_secure_installation  
 
+Enter your MySQL root password when prompted
 Enter Y to set up Validate Password plug-in  
 Select desired security level  
 Select N to keep password as is, or Y to change password if desired  
@@ -39,6 +47,10 @@ You may select Y for remaining prompts
 Add required repository, and update packages    
 
 	$ sudo add-apt-repository ppa:ondrej/php  
+
+Press Enter when prompted  
+update packages to include repository  
+
 	$ sudo apt-get update  
 
 Now install PHP 7.2  
@@ -83,7 +95,7 @@ Access MySQL command line
 Enter MySQL root password when prompted  
 
 	MySQL>$ CREATE DATABASE _your database name_;  
-	MySQL>$ GRANT ALL PRIVILEGES ON _your database name_ TO '_chosen user name_'@'localhost' IDENTIFIED BY '_your password_';  
+	MySQL>$ GRANT ALL PRIVILEGES ON _your database name_ TO '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';  
 	MySQL>$ FLUSH PRVILEGES;  
 	MySQL>$ EXIT;  
 
@@ -106,7 +118,7 @@ Update mySQL settings in wp-congig
 Make the following adjustments to the MySQL settings section of the wp-config file  
 
 	define('DB_NAME', '_your database name_');  
-	define('DB_USER', '_your database user name_');  
+	define('DB_USER', '_your database username_');  
 	define('DB_PASSWORD', '_your database password_');  
 
 Press ctrl-O to write, then press enter to save  
