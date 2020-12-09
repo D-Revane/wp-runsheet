@@ -10,6 +10,7 @@ Wordpress runs an a LAMP stack
  -MySQL  
  -PHP  
 
+
 Start with an SSH connection into your Ubuntu machine, now update server packages  
 
 	$ sudo apt-get update  
@@ -21,6 +22,17 @@ Now navigate to the /var directory, and add a temp folder to work out of
 	$sudo mkdir temp  
 
 Now give yourself full permissions within the temp directory, and then navigate to it  
+
+Let's start by updating server packages  
+
+	$ sudo apt-get update  
+
+Now navigate to /var directory, and creating a temp folder to work from    
+
+	$ cd /var  
+	$ sudo mkdir temp  
+
+Now give yourself full permissions within the temp directory, then navigate to it  
 
 	$ sudo chown -R _your sudo username_ temp  
 	$ cd temp  
@@ -83,8 +95,8 @@ Move Wordpress files from unzipped folder to web root folder eg: /var/www/html
 
 Set permissions for Wordpress files  
 
-	$ sudo chown -R www-date:www-data _your web root folder_  
-	$ sudo chmod -R 755 _your web root folder_  
+	$ sudo chown -R www-data:www-data _your web root_  
+	$ sudo chmod -R 755 _your web root_  
 
 ## **Create Wordpress database**  
 
@@ -93,6 +105,7 @@ Access MySQL command line
 	$ mysql -u root -p  
 
 Enter MySQL root password when prompted  
+
 
 	MySQL>$ CREATE DATABASE _your database name_;  
 	MySQL>$ GRANT ALL PRIVILEGES ON _your database name_ TO '_your database username_'@'localhost' IDENTIFIED BY '_your database password_';  
@@ -105,13 +118,13 @@ Navigate to your web root directory  eg: /var/www/html
 
 	$ cd _your web root_  
 
-Move unzipped Wordpress files into root directory  
+Change wp-config-sample file to wp-config file
 
 	$ sudo mv wp-config-sample.php wp-config.php  
 
 Enter your sudo password when prompted  
 
-Update mySQL settings in wp-congig  
+Update mySQL settings in wp-config file  
 
 	$ sudo nano wp-config.php  
 
