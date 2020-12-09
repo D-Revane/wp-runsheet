@@ -105,7 +105,7 @@ Change wp-config-sample file to wp-config file
 
 Enter your sudo password when prompted  
 
-Update mySQL settings in wp-congig  
+Update mySQL settings in wp-config file  
 
 	$ sudo nano wp-config.php  
 
