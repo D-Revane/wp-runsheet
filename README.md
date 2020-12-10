@@ -45,7 +45,7 @@ You may select Y for remaining prompts
 
 ## **Install PHP**    
 
-Add required repository, and update packages    
+Add required repository      
 
 	$ sudo add-apt-repository ppa:ondrej/php  
 
